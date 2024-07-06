@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./Track.module.css"
 
-function Track() {
+function Track({ trackNumber, songName, artist, album }) {
     return (
         <>
         <div className={styles.border}>
-            <h3>Track</h3>
+            <h3>Track {trackNumber}</h3>
             <ul>
-                <li>Artist</li>
-                <li>Song name</li>
+                <li>{songName}</li>
+                <li>{artist}</li>
+                <li>{album}</li>
             </ul>
         </div>
         </>
