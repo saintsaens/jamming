@@ -1,14 +1,14 @@
 import './App.css';
-import Playlist from './components/Playlist/Playlist';
 import SearchBar from './components/SearchBar/SearchBar';
-import SearchResults from './components/SearchResults/SearchResults';
+import ColumnsContainer from './components/ColumnsContainer/ColumnsContainer';
 
 function App() {
   return (
     <>
+    <div className="searchBar">
       <SearchBar />
-      <SearchResults />
-      <Playlist />
+    </div>
+      <ColumnsContainer />
     </>
   );
 }

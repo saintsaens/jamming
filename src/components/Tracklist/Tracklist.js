@@ -1,10 +1,9 @@
 import React from "react";
-import Track from "../Track/Track";
 import styles from "./Tracklist.module.css"
+import TrackPlaylistContainer from "../TrackPlaylistContainer/TrackPlaylistContainer";
 
 function Tracklist() {
     const firstTrack = {
-        trackNumber: 1,
         songName: "Sky is crying",
         artist: "Blaze",
         album: "Pradher"
@@ -14,11 +13,10 @@ function Tracklist() {
         <>
         <div className={styles.border}>
             <h2>Tracklist</h2>
-            <Track
-                trackNumber={firstTrack.trackNumber}
-                songName={firstTrack.songName}
-                artist={firstTrack.artist}
-                album={firstTrack.album}
+            <TrackPlaylistContainer
+                trackSongName={firstTrack.songName}
+                trackArtist={firstTrack.artist}
+                trackAlbum={firstTrack.album}
             />
         </div>
         </>
