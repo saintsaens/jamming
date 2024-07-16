@@ -1,4 +1,6 @@
 .container {
-    display: flex;
+    display: grid;
+    grid: auto / auto auto;
+    justify-items: center;
     justify-content: center;
 }
