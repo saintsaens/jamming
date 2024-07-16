@@ -5,7 +5,7 @@ function SearchBar() {
     return (
         <>
             <form>
-                <input type="text" className={styles.border} />
+                <input type="text" className={styles.searchInput} />
                 <input type="submit" value="Search" />
             </form>
         </>
