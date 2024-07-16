@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Track.module.css"
 
-function Track({ songName, artist, album }) {
+function Track(props) {
     return (
         <>
         <div className={styles.border}>
-            <h3>{songName}</h3>
-            <p>{artist} / {album}</p>
+            <h3>{props.songName}</h3>
+            <p>{props.artist} / {props.album}</p>
         </div>
         </>
     );

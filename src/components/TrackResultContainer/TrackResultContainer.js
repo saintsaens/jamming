@@ -2,15 +2,15 @@ import React from "react";
 import styles from "./TrackResultContainer.module.css"
 import Track from "../Track/Track";
 
-function TrackResultContainer({ trackSongName, trackArtist, trackAlbum }) {
+function TrackResultContainer(props) {
     return (
         <>
             <div className={styles.trackContainer}>
                 <div className={styles.track}>
                     <Track
-                        songName={trackSongName}
-                        artist={trackArtist}
-                        album={trackAlbum}
+                        songName={props.trackSongName}
+                        artist={props.trackArtist}
+                        album={props.trackAlbum}
                     />
                 </div>
                 <button className={styles.button}>Add to playlist</button>
