@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid: auto / auto auto;
+    grid: auto / 500px 500px;
     justify-items: center;
     justify-content: center;
 }
