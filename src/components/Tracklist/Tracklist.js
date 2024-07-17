@@ -1,24 +1,24 @@
 import React from "react";
 import styles from "./Tracklist.module.css"
-import TrackPlaylistContainer from "../TrackPlaylistContainer/TrackPlaylistContainer";
+import Track from "../Track/Track";
 
-function Tracklist() {
-    const firstTrack = {
-        songName: "Sky is crying",
-        artist: "Blaze",
-        album: "Pradher"
-    };
-
+function Tracklist(props) {
     return (
         <>
-        <div className={styles.border}>
-            <h2>Tracklist</h2>
-            <TrackPlaylistContainer
-                trackSongName={firstTrack.songName}
-                trackArtist={firstTrack.artist}
-                trackAlbum={firstTrack.album}
-            />
-        </div>
+            <div className={styles.container}>
+                {props.tracklist.map((track) => {
+                    return (
+                        <>
+                            <Track
+                                songName={track.songName}
+                                artist={track.artist}
+                                album={track.album}
+                            />
+                            <button className={styles.button}>Remove from playlist</button>
+                        </>
+                    )
+                })}
+            </div>
         </>
     );
 }

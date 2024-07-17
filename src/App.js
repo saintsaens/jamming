@@ -1,14 +1,36 @@
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import ColumnsContainer from './components/ColumnsContainer/ColumnsContainer';
+import { useState } from 'react';
 
 function App() {
+  const firstTrack = {
+    songName: "Sky is crying",
+    artist: "Blaze",
+    album: "Pradher Boilly Joseph Rouget de Lisle"
+  };
+  const secondTrack = {
+    songName: "Auber",
+    artist: "Sauret",
+    album: "Danhauser Vialon Offenbach Sérieyx Dourlen"
+  };
+  const thirdTrack = {
+    songName: "Lalo",
+    artist: "Koechlin",
+    album: "Mozin"
+  };
+  const [searchResults, setSearchResults] = useState([firstTrack, secondTrack, thirdTrack]);
+  const [tracklist, setTracklist] = useState([thirdTrack]);
+
   return (
     <>
-    <div className="searchBar">
-      <SearchBar />
-    </div>
-      <ColumnsContainer />
+      <div className="searchBar">
+        <SearchBar />
+      </div>
+      <ColumnsContainer
+        searchResults={searchResults}
+        tracklist={tracklist}
+      />
     </>
   );
 }

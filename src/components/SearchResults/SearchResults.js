@@ -1,34 +1,25 @@
-import React from "react";
-import TrackResultContainer from "../TrackResultContainer/TrackResultContainer";
+import React, { useState } from "react";
+import Track from "../Track/Track";
 import styles from "./SearchResults.module.css"
 
-function SearchResults() {
-    const firstTrack = {
-        songName: "Auber",
-        artist: "Sauret",
-        album: "Danhauser"
-    };
-    const secondTrack = {
-        songName: "Lalo",
-        artist: "Koechlin",
-        album: "Mozin"
-    };
-
+function SearchResults(props) {
     return (
         <>
-        <div className={styles.border}>
-            <h1>Search results</h1>
-            <TrackResultContainer 
-                trackSongName={firstTrack.songName}
-                trackArtist={firstTrack.artist}
-                trackAlbum={firstTrack.album}
-            />
-            <TrackResultContainer 
-                trackSongName={secondTrack.songName}
-                trackArtist={secondTrack.artist}
-                trackAlbum={secondTrack.album}
-            />
-        </div>
+            <div className={styles.container}>
+                <h1>Results</h1>
+                {props.searchResults.map((track) => {
+                    return (
+                        <>
+                            <Track
+                                songName={track.songName}
+                                artist={track.artist}
+                                album={track.album}
+                            />
+                            <button className={styles.button}>Add to playlist</button>
+                        </>
+                    )
+                })}
+            </div>
         </>
     );
 }

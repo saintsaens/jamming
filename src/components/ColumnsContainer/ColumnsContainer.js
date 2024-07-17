@@ -2,12 +2,12 @@ import Playlist from '../Playlist/Playlist';
 import SearchResults from '../SearchResults/SearchResults';
 import styles from "./ColumnsContainer.module.css"
 
-function ColumnsContainer() {
+function ColumnsContainer(props) {
   return (
     <>
     <div className={styles.container}>
-      <SearchResults />
-      <Playlist />
+      <SearchResults searchResults={props.searchResults}/>
+      <Playlist tracklist={props.tracklist}/>
     </div>
     </>
   );
