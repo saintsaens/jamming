@@ -1,7 +1,7 @@
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import ColumnsContainer from './components/ColumnsContainer/ColumnsContainer';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 function App() {
   const firstTrack = {
@@ -29,6 +29,10 @@ function App() {
   const [searchResults, setSearchResults] = useState([firstTrack, secondTrack, thirdTrack]);
   const [tracklist, setTracklist] = useState([thirdTrack]);
   const [playlistName, setPlaylistName] = useState("Playlist name");
+  const playlistTracksURI = useMemo(
+    () => tracklist.map(({ uri }) => ({ uri })),
+    [tracklist]
+  );
 
   const addTrackToTracklist = (newTrackId) => {
     if (!tracklist.some(track => track.id === newTrackId)) {
@@ -36,7 +40,7 @@ function App() {
       setTracklist((previousTracks) => [...previousTracks, newTrack]);
     }
   };
-  
+
   const removeTrackFromTracklist = (trackToRemove) => {
     setTracklist((previousTracks) => previousTracks.filter(track => track.id !== trackToRemove.id));
   };
