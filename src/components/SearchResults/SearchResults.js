@@ -3,6 +3,7 @@ import Track from "../Track/Track";
 import styles from "./SearchResults.module.css"
 
 function SearchResults(props) {
+
     return (
         <>
             <div className={styles.container}>
@@ -15,7 +16,7 @@ function SearchResults(props) {
                                 artist={track.artist}
                                 album={track.album}
                             />
-                            <button className={styles.button}>Add to playlist</button>
+                            <button className={styles.button} onClick={() => {props.onButtonClick(track.id)}}>Add to playlist</button>
                         </>
                     )
                 })}

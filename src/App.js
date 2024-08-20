@@ -26,18 +26,26 @@ function App() {
   const [tracklist, setTracklist] = useState([thirdTrack]);
   const [playlistName, setPlaylistName] = useState("Playlist name");
 
-return (
-  <>
-    <div className="searchBar">
-      <SearchBar />
-    </div>
-    <ColumnsContainer
-      searchResults={searchResults}
-      playlistName={playlistName}
-      tracklist={tracklist}
-    />
-  </>
-);
+  const addTrackToTracklist = (newTrackId) => {
+    if (!tracklist.some(track => track.id === newTrackId)) {
+      const newTrack = searchResults.find(track => track.id === newTrackId);
+      setTracklist((previousTracks) => [...previousTracks, newTrack]);
+    }
+  };
+
+  return (
+    <>
+      <div className="searchBar">
+        <SearchBar />
+      </div>
+      <ColumnsContainer
+        searchResults={searchResults}
+        addTrackToTracklist={addTrackToTracklist}
+        playlistName={playlistName}
+        tracklist={tracklist}
+      />
+    </>
+  );
 }
 
 export default App;

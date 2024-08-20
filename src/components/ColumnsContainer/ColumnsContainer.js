@@ -8,6 +8,7 @@ function ColumnsContainer(props) {
       <div className={styles.container}>
         <SearchResults
           searchResults={props.searchResults}
+          onButtonClick={props.addTrackToTracklist}
         />
         <Playlist
           playlistName={props.playlistName}
