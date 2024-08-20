@@ -49,6 +49,10 @@ function App() {
     setPlaylistName(newName);
   }
 
+  const saveToSpotify = () => {
+    setTracklist([]);
+  };
+
   return (
     <>
       <div className="searchBar">
@@ -61,6 +65,7 @@ function App() {
         updatePlaylistName={updatePlaylistName}
         playlistName={playlistName}
         tracklist={tracklist}
+        saveToSpotify={saveToSpotify}
       />
     </>
   );

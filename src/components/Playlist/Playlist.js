@@ -7,6 +7,10 @@ function Playlist(props) {
         props.onPlaylistNameChange(event.target.value);
         props.updatePlaylistName(event.target.value);
     };
+    
+    const saveToSpotify = () => {
+        props.saveToSpotify();
+        props.updatePlaylistName("");
     };
     return (
         <>
@@ -20,7 +24,7 @@ function Playlist(props) {
                     tracklist={props.tracklist}
                     removeFromTracklist={props.removeFromTracklist}
                 />
-                <button>Save to Spotify</button>
+                <button onClick={saveToSpotify}>Save to Spotify</button>
             </div>
         </>
     );

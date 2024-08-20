@@ -15,6 +15,7 @@ function ColumnsContainer(props) {
           tracklist={props.tracklist}
           removeFromTracklist={props.removeTrackFromTracklist}
           updatePlaylistName={props.updatePlaylistName}
+          saveToSpotify={props.saveToSpotify}
         />
       </div>
     </>
