@@ -16,9 +16,10 @@ function Playlist(props) {
         <>
             <div className={styles.border}>
                 <input
-                    placeholder={props.playlistName}
+                    placeholder={props.playlistName === "" ? "Playlist name" : props.playlistName}
                     className={styles.inputh1}
                     onChange={handleNameChange}
+                    value={props.playlistName}
                 />
                 <Tracklist
                     tracklist={props.tracklist}
