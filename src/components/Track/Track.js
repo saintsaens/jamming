@@ -5,7 +5,7 @@ function Track(props) {
     return (
         <>
         <div className={styles.border}>
-            <h3>{props.songName}</h3>
+            <h3>{props.title}</h3>
             <p>{props.artist} / {props.album}</p>
         </div>
         </>

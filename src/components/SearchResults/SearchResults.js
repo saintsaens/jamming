@@ -11,7 +11,7 @@ function SearchResults(props) {
                     return (
                         <>
                             <Track
-                                songName={track.songName}
+                                title={track.title}
                                 artist={track.artist}
                                 album={track.album}
                             />
