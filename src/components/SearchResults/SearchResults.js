@@ -16,7 +16,7 @@ function SearchResults(props) {
                                 artist={track.artist}
                                 album={track.album}
                             />
-                            <button className={styles.button} onClick={() => {props.onButtonClick(track.id)}}>Add to playlist</button>
+                            <button className={styles.button} onClick={() => {props.addToTracklist(track.id)}}>Add to playlist</button>
                         </>
                     )
                 })}

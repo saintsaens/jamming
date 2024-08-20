@@ -5,6 +5,8 @@ import styles from "./Playlist.module.css"
 function Playlist(props) {
     const handleNameChange = (event) => {
         props.onPlaylistNameChange(event.target.value);
+        props.updatePlaylistName(event.target.value);
+    };
     };
     return (
         <>
@@ -16,7 +18,7 @@ function Playlist(props) {
                 />
                 <Tracklist
                     tracklist={props.tracklist}
-                    onButtonClick={props.onButtonClick}
+                    removeFromTracklist={props.removeFromTracklist}
                 />
                 <button>Save to Spotify</button>
             </div>

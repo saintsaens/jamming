@@ -14,7 +14,7 @@ function Tracklist(props) {
                                 artist={track.artist}
                                 album={track.album}
                             />
-                            <button className={styles.button} onClick={(() => {props.onButtonClick(track)})}>Remove from playlist</button>
+                            <button className={styles.button} onClick={(() => {props.removeFromTracklist(track)})}>Remove from playlist</button>
                         </>
                     )
                 })}

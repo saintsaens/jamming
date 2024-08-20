@@ -8,13 +8,13 @@ function ColumnsContainer(props) {
       <div className={styles.container}>
         <SearchResults
           searchResults={props.searchResults}
-          onButtonClick={props.addTrackToTracklist}
+          addToTracklist={props.addTrackToTracklist}
           />
         <Playlist
           playlistName={props.playlistName}
           tracklist={props.tracklist}
-          onButtonClick={props.removeTrackFromTracklist}
-          onPlaylistNameChange={props.updatePlaylistName}
+          removeFromTracklist={props.removeTrackFromTracklist}
+          updatePlaylistName={props.updatePlaylistName}
         />
       </div>
     </>
