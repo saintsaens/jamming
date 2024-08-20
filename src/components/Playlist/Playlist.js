@@ -4,7 +4,6 @@ import styles from "./Playlist.module.css"
 
 function Playlist(props) {
     const handleNameChange = (event) => {
-        props.onPlaylistNameChange(event.target.value);
         props.updatePlaylistName(event.target.value);
     };
     
