@@ -5,16 +5,19 @@ import { useState } from 'react';
 
 function App() {
   const firstTrack = {
+    id: 1,
     title: "Sky is crying",
     artist: "Blaze",
     album: "Pradher Boilly Joseph Rouget de Lisle"
   };
   const secondTrack = {
+    id: 2,
     title: "Auber",
     artist: "Sauret",
     album: "Danhauser Vialon Offenbach Sérieyx Dourlen"
   };
   const thirdTrack = {
+    id: 3,
     title: "Lalo",
     artist: "Koechlin",
     album: "Mozin"
