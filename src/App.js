@@ -38,6 +38,10 @@ function App() {
     setTracklist((previousTracks) => previousTracks.filter(track => track.id !== trackToRemove.id));
   };
 
+  const updatePlaylistName = newName => {
+    setPlaylistName(newName);
+  }
+
   return (
     <>
       <div className="searchBar">
@@ -47,6 +51,7 @@ function App() {
         searchResults={searchResults}
         addTrackToTracklist={addTrackToTracklist}
         removeTrackFromTracklist={removeTrackFromTracklist}
+        updatePlaylistName={updatePlaylistName}
         playlistName={playlistName}
         tracklist={tracklist}
       />
