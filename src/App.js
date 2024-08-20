@@ -21,18 +21,20 @@ function App() {
   };
   const [searchResults, setSearchResults] = useState([firstTrack, secondTrack, thirdTrack]);
   const [tracklist, setTracklist] = useState([thirdTrack]);
+  const [playlistName, setPlaylistName] = useState("Playlist name");
 
-  return (
-    <>
-      <div className="searchBar">
-        <SearchBar />
-      </div>
-      <ColumnsContainer
-        searchResults={searchResults}
-        tracklist={tracklist}
-      />
-    </>
-  );
+return (
+  <>
+    <div className="searchBar">
+      <SearchBar />
+    </div>
+    <ColumnsContainer
+      searchResults={searchResults}
+      playlistName={playlistName}
+      tracklist={tracklist}
+    />
+  </>
+);
 }
 
 export default App;

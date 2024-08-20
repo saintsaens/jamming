@@ -5,10 +5,15 @@ import styles from "./ColumnsContainer.module.css"
 function ColumnsContainer(props) {
   return (
     <>
-    <div className={styles.container}>
-      <SearchResults searchResults={props.searchResults}/>
-      <Playlist tracklist={props.tracklist}/>
-    </div>
+      <div className={styles.container}>
+        <SearchResults
+          searchResults={props.searchResults}
+        />
+        <Playlist
+          playlistName={props.playlistName}
+          tracklist={props.tracklist}
+        />
+      </div>
     </>
   );
 }

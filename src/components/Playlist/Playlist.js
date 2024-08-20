@@ -6,7 +6,7 @@ function Playlist(props) {
     return (
         <>
         <div className={styles.border}>
-            <h1>Playlist</h1>
+            <h1>{props.playlistName}</h1>
             <Tracklist tracklist={props.tracklist}/>
             <button>Save to Spotify</button>
         </div>
