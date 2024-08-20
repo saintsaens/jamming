@@ -22,6 +22,7 @@ function App() {
     artist: "Koechlin",
     album: "Mozin"
   };
+
   const [searchResults, setSearchResults] = useState([firstTrack, secondTrack, thirdTrack]);
   const [tracklist, setTracklist] = useState([thirdTrack]);
   const [playlistName, setPlaylistName] = useState("Playlist name");
@@ -32,6 +33,10 @@ function App() {
       setTracklist((previousTracks) => [...previousTracks, newTrack]);
     }
   };
+  
+  const removeTrackFromTracklist = (trackToRemove) => {
+    setTracklist((previousTracks) => previousTracks.filter(track => track.id !== trackToRemove.id));
+  };
 
   return (
     <>
@@ -41,6 +46,7 @@ function App() {
       <ColumnsContainer
         searchResults={searchResults}
         addTrackToTracklist={addTrackToTracklist}
+        removeTrackFromTracklist={removeTrackFromTracklist}
         playlistName={playlistName}
         tracklist={tracklist}
       />

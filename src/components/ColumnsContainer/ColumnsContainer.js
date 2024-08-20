@@ -9,10 +9,11 @@ function ColumnsContainer(props) {
         <SearchResults
           searchResults={props.searchResults}
           onButtonClick={props.addTrackToTracklist}
-        />
+          />
         <Playlist
           playlistName={props.playlistName}
           tracklist={props.tracklist}
+          onButtonClick={props.removeTrackFromTracklist}
         />
       </div>
     </>

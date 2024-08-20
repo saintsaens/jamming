@@ -5,11 +5,14 @@ import styles from "./Playlist.module.css"
 function Playlist(props) {
     return (
         <>
-        <div className={styles.border}>
-            <h1>{props.playlistName}</h1>
-            <Tracklist tracklist={props.tracklist}/>
-            <button>Save to Spotify</button>
-        </div>
+            <div className={styles.border}>
+                <h1>{props.playlistName}</h1>
+                <Tracklist
+                    tracklist={props.tracklist}
+                    onButtonClick={props.onButtonClick}
+                />
+                <button>Save to Spotify</button>
+            </div>
         </>
     );
 }
