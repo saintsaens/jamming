@@ -6,18 +6,21 @@ import { useState } from 'react';
 function App() {
   const firstTrack = {
     id: 1,
+    uri: "spotify:track:11dFghVXANMlKmJXsNCbNl",
     title: "Sky is crying",
     artist: "Blaze",
     album: "Pradher Boilly Joseph Rouget de Lisle"
   };
   const secondTrack = {
     id: 2,
+    uri: "spotify:track:4JJKuulfocD4ni94vMzpDs",
     title: "Auber",
     artist: "Sauret",
     album: "Danhauser Vialon Offenbach Sérieyx Dourlen"
   };
   const thirdTrack = {
     id: 3,
+    uri: "spotify:track:0crY7pPfWKmVzMW03UWN0O",
     title: "Lalo",
     artist: "Koechlin",
     album: "Mozin"
